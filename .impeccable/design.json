@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "colors": {
+    "ink": "#101010",
+    "inkSoft": "#181818",
+    "redFallback": "#e52d35",
+    "redDatabaseDefault": "#d9272e",
+    "paper": "#f2f0eb",
+    "paperDim": "#c5c1ba"
+  },
+  "typography": {
+    "display": "Barlow Condensed",
+    "body": "DM Sans"
+  },
+  "geometry": {
+    "primaryAction": "square corners",
+    "photoBays": "rectangular with thin corner marks",
+    "catalog": "three columns desktop, two columns mobile"
+  },
+  "motion": "subtle color hover; reduced motion disables transitions"
+}

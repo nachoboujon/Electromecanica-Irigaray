@@ -1,0 +1,17 @@
+{
+  "scope": "Complete public landing page for an electromecánico workshop and replacement-parts shop",
+  "mode": "Persuade",
+  "audience": "People and businesses in Argentina seeking workshop services or parts",
+  "job": "Understand the offer, ask a question, request a quote, or pay for a published product",
+  "proof": "Real workshop details, images, catalog and testimonials will be supplied by the owner; leave these empty or clearly marked as pending",
+  "constraints": "Red and black; responsive; editable PostgreSQL content; Mercado Pago Checkout Pro; verified webhook updates; no invented business facts or prices",
+  "direction_contract": {
+    "THESIS": "A workshop landing page organized around the visitor's next practical decision: contact the shop, understand the repair offer, or ask about a part.",
+    "OWN-WORLD": "Use a near-black workshop frame with decisive red action surfaces, warm neutral text, measured technical linework, restrained square geometry, and clear controls. The logo and photographic bays remain owner-replaceable.",
+    "STORY": "The visitor first sees a concise workshop introduction and contact actions, then scans services and parts, learns about the shop, resolves common questions, and sends a message or checks out through Mercado Pago.",
+    "FIRST VIEWPORT": "A compact dark navigation anchors a two-column hero: strong Spanish headline and quote/WhatsApp actions on the left, an intentionally labeled photo placeholder with red technical framing on the right. The workshop name remains an editable pending value.",
+    "FORM": "Code-led single-page landing with server-backed content, payment creation and a distinct verified notification route.",
+    "FINISH": "unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance"
+  },
+  "unresolved": ["Workshop identity and contact details", "Real photography and logo", "Catalog, prices and availability", "Hosting URL and production credentials"]
+}
