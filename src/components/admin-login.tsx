@@ -1,0 +1,7 @@
+"use client";
+import { useState } from "react";
+export function AdminLogin() {
+  const [email,setEmail]=useState(""); const [password,setPassword]=useState(""); const [busy,setBusy]=useState(false); const [error,setError]=useState("");
+  async function submit(event: React.FormEvent<HTMLFormElement>) { event.preventDefault(); setBusy(true);setError(""); try { const response=await fetch("/api/admin/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email,password})}); const data=await response.json(); if(!response.ok) throw new Error(data.error||"No se pudo iniciar sesión."); location.reload(); } catch(e) { setError(e instanceof Error?e.message:"No se pudo iniciar sesión."); } finally {setBusy(false);} }
+  return <main className="admin-login"><a className="admin-back" href="/">← Sitio público</a><form onSubmit={submit}><p className="eyebrow"><span className="eyebrow-line"/>Acceso privado</p><h1>Administrar<br/><em>repuestos.</em></h1><label>Correo<input type="email" autoComplete="username" required value={email} onChange={e=>setEmail(e.target.value)}/></label><label>Contraseña<input type="password" autoComplete="current-password" required value={password} onChange={e=>setPassword(e.target.value)}/></label>{error&&<p className="admin-error" role="alert">{error}</p>}<button className="button button-red" disabled={busy}>{busy?"Validando…":"Ingresar"}<span>↗</span></button></form></main>
+}

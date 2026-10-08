@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zxing/browser": "^0.1.5",
     "next": "^15.5.0",
     "pg": "^8.16.3",
     "react": "^19.1.0",

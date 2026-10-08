@@ -30,4 +30,8 @@ Barlow Condensed is used for display headlines; DM Sans is used for body copy an
 
 ## Motion and interaction
 
-Motion is limited to subtle hover color changes. Reduced-motion preferences disable transitions and smooth scrolling. Keyboard focus uses a visible red outline.
+The landing has one reversible scroll controller in `src/components/landing-motion.tsx`. Each frame uses cached layout coordinates and the current native scroll position; there is no scroll interception, timer-driven entrance, or animation dependency. Layout is measured again only when content, fonts, images, or viewport dimensions change. Saturated progress values are not rewritten. Keyboard focus keeps the affected content stationary and fully opaque.
+
+The order is Inicio → Servicios → Repuestos → Sobre el taller → Preguntas frecuentes → Contacto → footer. Each boundary has a separate decorative bridge: a burgundy diagonal opening, an automotive contour with a warm background change, a shutter reveal, a thinning line that simplifies the composition, an expanding red band, and a dark release into the footer. Published testimonials, if supplied, are also included in the actual flow, with a separate settling line before FAQ.
+
+Incoming headings and content have coordinated scroll ranges. Services move laterally in alternating directions, parts use small depth and scale changes, the workshop photo reveals through a mask, FAQ rows enter individually, and contact columns gather from opposite sides. Visible text remains at least 64% opaque during entrances and 74% during departures; focused controls stay fully visible. Mobile halves travel distances and removes 3D depth and image masks. Reduced motion presents all content without spatial movement, shorter static decorative bridges, and immediate anchor navigation. Without JavaScript all content remains visible.
